@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>24</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/JavaScript">
+$(document).ready(function(){
+
+
+
+/*
+
+var objectMethods = new Obj(
+			add 	: 	function addN(n1, n2){
+							var n = n1 + n2;
+							return n;
+						},
+			minus 	:	function minusN(n1, n2){
+							var n = n1 - n2;
+							return n;
+						},
+			multiply 	: 	function multiplyN(n1, n2){
+							var n = n1 * n2;
+							return n;
+						},
+			divide 		:	function divideN(n1, n2){
+							var n = n1 / n2;
+							return n;
+						},
+);
+
+var card = new Array(
+		['a','3','8','6','1'],
+		['b','2','9','6','1'],
+		['c','7','3','2','1']
+	);
+
+
+var cardObj = new Obj{
+			rating	:  card[c][0], 
+			top 	:  card[c][1],
+			right 	:  card[c][2],
+			bottom 	:  card[c][3],
+			left 	:  card[c][4] 
+};
+
+var goal = 24;
+
+*/
+//Function params int @n1 , @n2 
+
+function outerMathDIVI(n1,n2){
+	function divi(n1,n2){
+		return n1 / n2;
+	}
+
+	function calc(n1, n2, processForCalc){
+		return processForCalc(n1, n2);
+	}
+
+	return calc(n1, n2, divi);
+}
+
+function outerMathMLTPLY(n1,n2){
+	function mltply(n1,n2){
+		return n1 * n2;
+	}
+
+	function calc(n1, n2, processForCalc){
+		return processForCalc(n1, n2);
+	}
+
+	return calc(n1, n2, mltply);
+}
+
+function outerMathADD(n1,n2){
+	function add(n1,n2){
+		return n1 + n2;
+	}
+
+	function calc(n1, n2, processForCalc){
+		return processForCalc(n1, n2);
+	}
+
+	return calc(n1, n2, add);
+}
+
+function outerMathSUB(n1,n2){
+	function sub(n1,n2){
+		return n1 - n2;
+	}
+
+	function calc(n1, n2, processForCalc){
+		return processForCalc(n1, n2);
+	}
+
+	return calc(n1, n2, sub);
+}
+
+//var firstTotal = outerMathADD(45, 21);
+
+//console.log("adding n1 + n2 ="+firstTotal);
+
+
+});
+</script>
+
+<style>form{line-height:1.4em; font-size:1.4em;padding:3px 3px;margin:3px 3px;font-weight:800;}</style>
+</head>
+<body>
+<h1>24</h1>
+<FORM NAME="form" ACTION="" METHOD="GET">
+	<SELECT name="n1">
+	 	<OPTION>1</OPTION>
+	 	<OPTION>2</OPTION>
+	 	<OPTION>3</OPTION>
+	 	<OPTION>4</OPTION>
+	 	<OPTION>5</OPTION>
+	 	<OPTION>6</OPTION>
+	 	<OPTION>7</OPTION>
+	 	<OPTION>8</OPTION>
+	 	<OPTION>9</OPTION>
+	</SELECT>
+	<SELECT name="s1">
+	 	<OPTION>+</OPTION>
+	 	<OPTION>-</OPTION>
+	 	<OPTION>*</OPTION>
+	 	<OPTION>/</OPTION>
+	</SELECT>
+	<SELECT name="n2">
+	 	<OPTION>1</OPTION>
+	 	<OPTION>2</OPTION>
+	 	<OPTION>3</OPTION>
+	 	<OPTION>4</OPTION>
+	 	<OPTION>5</OPTION>
+	 	<OPTION>6</OPTION>
+	 	<OPTION>7</OPTION>
+	 	<OPTION>8</OPTION>
+	 	<OPTION>9</OPTION>
+	</SELECT>
+	<SELECT name="s2">
+	 	<OPTION>+</OPTION>
+	 	<OPTION>-</OPTION>
+	 	<OPTION>*</OPTION>
+	 	<OPTION>/</OPTION>
+	</SELECT>
+	<SELECT name="n3">
+	 	<OPTION>1</OPTION>
+	 	<OPTION>2</OPTION>
+	 	<OPTION>3</OPTION>
+	 	<OPTION>4</OPTION>
+	 	<OPTION>5</OPTION>
+	 	<OPTION>6</OPTION>
+	 	<OPTION>7</OPTION>
+	 	<OPTION>8</OPTION>
+	 	<OPTION>9</OPTION>
+	</SELECT>
+	<SELECT name="s3">
+	 	<OPTION>+</OPTION>
+	 	<OPTION>-</OPTION>
+	 	<OPTION>*</OPTION>
+	 	<OPTION>/</OPTION>
+	</SELECT>
+	<SELECT name="n4">
+	 	<OPTION>1</OPTION>
+	 	<OPTION>2</OPTION>
+	 	<OPTION>3</OPTION>
+	 	<OPTION>4</OPTION>
+	 	<OPTION>5</OPTION>
+	 	<OPTION>6</OPTION>
+	 	<OPTION>7</OPTION>
+	 	<OPTION>8</OPTION>
+	 	<OPTION>9</OPTION>
+	</SELECT>
+
+<INPUT TYPE="hidden" NAME="hidden-inputbox" VALUE="round 5"><P>
+<INPUT TYPE="button" NAME="button" Value="Click" onClick="testButton(this.form)">
+</FORM>
+<SCRIPT LANGUAGE="JavaScript">
+function testButton(form){
+
+    var n1 = form.n1.value;
+    var n2 = form.n2.value;
+    var n3 = form.n3.value;
+	var n4 = form.n4.value;
+	var s1 = form.s1.value;
+	var s2 = form.s2.value;
+	var s3 = form.s3.value;
+
+	var goal = 24;
+
+
+//Function params int @n1 , @n2 
+
+function outerMathDIVI(n1,n2){
+	function divi(n1,n2){
+		return n1 / n2;
+	}
+
+	function calc(n1, n2, processForCalc){
+		return processForCalc(n1, n2);
+	}
+
+	return calc(n1, n2, divi);
+}
+
+function outerMathMLTPLY(n1,n2){
+	function mltply(n1,n2){
+		return n1 * n2;
+	}
+
+	function calc(n1, n2, processForCalc){
+		return processForCalc(n1, n2);
+	}
+
+	return calc(n1, n2, mltply);
+}
+
+function outerMathADD(n1,n2){
+	function add(n1,n2){
+		return n1 + n2;
+	}
+
+	function calc(n1, n2, processForCalc){
+		return processForCalc(n1, n2);
+	}
+
+	return calc(n1, n2, add);
+}
+
+function outerMathSUB(n1,n2){
+	function sub(n1,n2){
+		return n1 - n2;
+	}
+
+	function calc(n1, n2, processForCalc){
+		return processForCalc(n1, n2);
+	}
+
+	return calc(n1, n2, sub);
+}
+
+var total = function testResults(n1,s1,n2,s2,n3,s3,n4){
+		if(s1 == "+"){
+			var a1  =  outerMathADD(n1,n2);
+		}else if(s1 == "-"){
+			var a1  =  outerMathSUB(n1,n2);
+		}else if(s1 == "*"){
+			var a1  =  	outerMathMLTPLY(n1,n2);
+		}else if(s1 == "\/"){
+			var a1  =  outerMathDIVI(n1,n2);
+		}else{ console.log("error S1");};
+console.log(a1);
+		if(s2 == "+"){
+			var a2  =  outerMathADD(a1,n3);
+		}else if(s2 == "-"){
+			var a2  =  outerMathSUB(a1,n3);
+		}else if(s2 == "*"){
+			var a2  =  outerMathMLTPLY(a1,n3);
+		}else if(s2 == "\/"){
+			var a2  =  outerMathDIVI(a1,n3);
+		}else{ console.log("error S2");};
+console.log(a2);
+		if(s3 == "+"){
+			var totalCalc  =  outerMathADD(a2,n4);
+		}else if(s3 == "-"){
+			var totalCalc  =  outerMathSUB(a2,n4);
+		}else if(s3 == "*"){
+			var totalCalc  =  outerMathMLTPLY(a2,n4);
+		}else if(s3 == "\/"){
+			var totalCalc  =  outerMathDIVI(a2,n4);
+		}else{ console.log("error S3");};
+console.log(totalCalc);
+		return totalCalc;
+
+
+
+ alert (n1+" "+s1+" "+n2+" "+s2+" "+n3+" "+s3+" "+n4+" = "+totalCalc);
+  };
+total(n1,s1,n2,s2,n3,s3,n4);
+};
+
+</script>
+</body>
+</html>
